@@ -1,0 +1,13 @@
+<h1>Nous sommes ravis de vous compter parmis nous... dans qlqs cliques</h1>
+<form  (ngSubmit)="onSubmit()" #bookForm="ngForm">
+  <div class="example-full-width">
+
+    <input   placeholder="nom" name="title" [(ngModel)] = "utilisateur.lastName" required>
+    <input   placeholder="prenom" name="title" [(ngModel)] = "utilisateur.firstName" required>
+
+  </div>
+
+
+  <button  type="submit"  [disabled]="!bookForm.form.valid">Submit</button>
+
+</form>

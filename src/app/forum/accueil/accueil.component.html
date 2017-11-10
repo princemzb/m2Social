@@ -1,0 +1,10 @@
+<h2>Bienvenu sur fan de chat.com</h2>
+<ul>
+  <li *ngFor="let post of posts" (mouseover)="chowUtilisateur(post.userId)" (mouseleave)="hideUtilisateur()" >
+    {{post.content}}
+    <p *ngIf="post.img"><a href="{{post.img}}">Voir l'image</a></p>
+  </li>
+  <span *ngIf="fetchedUtilisateur">
+    Ecrit par  {{fetchedUtilisateur.firstName}} {{fetchedUtilisateur.lastName}}
+  </span>
+</ul>

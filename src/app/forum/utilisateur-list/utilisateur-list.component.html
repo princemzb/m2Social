@@ -1,0 +1,8 @@
+<h2>Les abonnées</h2>
+<ul>
+  <a *ngFor="let utilisateur of utilisateurs"  [routerLink]="['/utilisateurs',utilisateur.id]">
+    {{utilisateur.firstName}}<br>
+  </a>
+  <router-outlet></router-outlet>
+
+</ul>
